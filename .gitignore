@@ -1,14 +1,16 @@
-# Compiler files
-cache/
-out/
+# === Foundry Default ===
+/out
+/cache
+/lib
+/forge-artifacts
 
-# Ignores development broadcast logs
-!/broadcast
+# === Foundry Broadcasts ===
 /broadcast/*/31337/
 /broadcast/**/dry-run/
+/broadcast/
 
-# Docs
-docs/
+# === Docs (if auto-generated)
+/docs
 
-# Dotenv file
-.env
+# === Dotenv (never push this)
+/.env
