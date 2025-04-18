@@ -19,7 +19,7 @@ EtherVault is a secure and gas-efficient Ethereum smart contract built with Soli
 ![Foundry](https://img.shields.io/badge/Powered%20by-Foundry-%23E95420)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![Tests](https://img.shields.io/badge/Tests-Passing-brightgreen)
-![Coverage](https://img.shields.io/badge/Coverage-87%25-blue)
+![Coverage](https://img.shields.io/badge/Coverage-85.71%25-orange)
 
 ---
 

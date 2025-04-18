@@ -7,6 +7,7 @@ import {HelperConfig} from "../script/HelperConfig.s.sol";
 contract PriceConverter {
     HelperConfig helperConfig = new HelperConfig();
     address priceFeedAddress = helperConfig.run();
+
     function getPrice() internal view returns (uint128) {
         MockV3Aggregator s_priceFeed = MockV3Aggregator(priceFeedAddress);
         (, int128 ETHprice,,,) = s_priceFeed.latestRoundData();
@@ -15,7 +16,7 @@ contract PriceConverter {
 
     function getConversionRate(uint256 _amount) internal view returns (uint128) {
         uint128 price = getPrice();
-        uint128 ETHtoUSD = uint128((_amount * price)/1e26);
+        uint128 ETHtoUSD = uint128((_amount * price) / 1e26);
         return (ETHtoUSD);
     }
 

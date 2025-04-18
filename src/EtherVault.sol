@@ -146,11 +146,14 @@ contract EtherVault is PriceConverter {
 
     /// @dev owner can announce and get back emergency by this
     function changeEmergency(uint64 _emergencyDuration) public onlyOwner {
-        if (isEmergency == true){isEmergency = false;}
-        else{ isEmergency = true;
-        emergencyStartedAt = uint64(block.timestamp);
-        emergencyDuration = _emergencyDuration;
-        emit emergency(isEmergency, emergencyStartedAt);}
+        if (isEmergency == true) {
+            isEmergency = false;
+        } else {
+            isEmergency = true;
+            emergencyStartedAt = uint64(block.timestamp);
+            emergencyDuration = _emergencyDuration;
+            emit emergency(isEmergency, emergencyStartedAt);
+        }
     }
     /// @dev owner can withdraw after deadline during emergency by this
 
